@@ -51,13 +51,22 @@ window.onload = function () {
       this.el.addEventListener(
         "touchstart",
         function (e) {
-          let cuphead = document.querySelector("#cuphead-model")
-          cuphead.setAttribute(
-            "animation-mixer",
-            "clip: Cuphead_anim_22; loop: once;"
-          )
-          this.audio.play()
-          console.log(e)
+            let cuphead = document.querySelector("#cuphead-model")         
+            console.log(cuphead.getAttribute("animation-mixer").clip)
+            
+            if(cuphead.getAttribute("animation-mixer").clip === "Cuphead_anim_22"){
+                cuphead.setAttribute("animation-mixer", "clip: Static Pose")   
+                this.audio.pause()
+                this.audio.currentTime = 0
+            }else{
+                cuphead.setAttribute(
+                    "animation-mixer",
+                    "clip: Cuphead_anim_22; loop: repeat; timeScale: 3.5"
+                    )
+                    this.audio.play()
+                    this.audio.loop = true
+                } 
+            console.log(e)
         }.bind(this)
       )
 
@@ -81,3 +90,4 @@ window.onload = function () {
     },
   })
 }
+
