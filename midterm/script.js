@@ -153,9 +153,7 @@ window.onload = function () {
         function (e) {
           console.log(e)
           let enemy = document.querySelector("#enemy-model")
-          enemy.SetAttribute("animation-mixer", "clip: Idle")
-          this.audio.pause()
-          this.audio.currentTime = 0
+          enemy.removeAttribute("animation-mixer")
         }.bind(this)
       )
     },
