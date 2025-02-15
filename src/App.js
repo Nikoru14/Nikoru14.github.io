@@ -1,11 +1,16 @@
 import { useState } from 'react'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import reactLogo from './assets/coffee-beans.svg'
+import viteLogo from './assets/coffee-cup.svg'
 import './App.css'
 
 const App = () => {
   const [count, setCount] = useState(0)
+
+  const openInNewTab = url => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
 
   return (
     <>
@@ -17,20 +22,18 @@ const App = () => {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1>Mama order Ice Coffee tomorrow</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+        <button onClick={() => openInNewTab('https://food.grab.com')}>
+          YES BUTTON ONLY
         </button>
         <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
         </p>
         <p>
           test commit
         </p>
       </div>
       <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
       </p>
     </>
   )
