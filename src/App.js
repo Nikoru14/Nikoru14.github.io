@@ -27,6 +27,8 @@ const App = () => {
         <button onClick={() => openInNewTab('https://food.grab.com')}>
           YES BUTTON ONLY
         </button>
+        <button className="bg-sky-500 hover:bg-sky-700 ...">Save changes</button>
+
         <p>
         </p>
         <p>
