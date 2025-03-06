@@ -1,8 +1,7 @@
 import { useState } from 'react'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import NavBar from './components/NavBar.js'
-import reactLogo from './assets/coffee-beans.svg'
-import viteLogo from './assets/coffee-cup.svg'
+import coffeeCupSVG from './assets/coffee-cup.svg'
 import './App.css'
 
 const App = () => {
@@ -23,7 +22,7 @@ const App = () => {
       <div className='flex justify-center'>
         <div className="card">
           <p>
-            <img src={viteLogo} alt="React Logo" className="logo" />
+            <img src={coffeeCupSVG} alt="Coffee Cup" className="logo" />
           </p>
           <p>
             palpitate malala
