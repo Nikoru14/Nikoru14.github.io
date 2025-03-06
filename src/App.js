@@ -17,28 +17,19 @@ const App = () => {
     <>
       <div>
         <NavBar />
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Mama order Ice Coffee tomorrow</h1>
-      <div className="card">
-        <button onClick={() => openInNewTab('https://food.grab.com')}>
-          YES BUTTON ONLY
-        </button>
-        <button className="bg-sky-500 hover:bg-sky-700">Save changes</button>
 
-        <p>
-        </p>
-        <p>
-          test commit
-        </p>
       </div>
-      <p className="read-the-docs">
-      </p>
+      <h1 className='text-8xl my-4'>Tara kape?</h1>
+      <div className='flex justify-center'>
+        <div className="card">
+          <p>
+            <img src={viteLogo} alt="React Logo" className="logo" />
+          </p>
+          <p>
+            palpitate malala
+          </p>
+        </div>
+      </div>
     </>
   )
 }
