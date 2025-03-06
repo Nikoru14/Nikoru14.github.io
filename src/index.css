@@ -1,56 +1,62 @@
 @import 'tailwindcss';
 
+
+/* Custom Dark Mode Theme */
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --primary-color: #8f43ee;
+  /* Violet Accent */
+  /* --primary-color: #22c55e;  Green Accent */
+  --background-color: #121212;
+  --text-color: #e5e7eb;
+  --card-bg: #1e1e1e;
+  --border-color: #2d2d2d;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-
-a:hover {
-  color: #535bf2;
-}
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: sans-serif;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.card {
+  background-color: var(--card-bg);
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border-color);
 }
 
+.button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.2s;
+  background-color: var(--primary-color);
+  color: white;
+}
 
+.button:hover {
+  filter: brightness(1.1);
+}
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
+.button:active {
+  transform: scale(0.95);
+}
 
-  a:hover {
-    color: #747bff;
-  }
+.input {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+  background-color: var(--card-bg);
+  color: white;
+}
 
-  A button {
-    background-color: #f9f9f9;
-  }
+.link {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
 }

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import NavBar from './components/NavBar.js'
 import reactLogo from './assets/coffee-beans.svg'
 import viteLogo from './assets/coffee-cup.svg'
 import './App.css'
@@ -15,6 +16,7 @@ const App = () => {
   return (
     <>
       <div>
+        <NavBar />
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
@@ -27,7 +29,7 @@ const App = () => {
         <button onClick={() => openInNewTab('https://food.grab.com')}>
           YES BUTTON ONLY
         </button>
-        <button className="bg-sky-500 hover:bg-sky-700 ...">Save changes</button>
+        <button className="bg-sky-500 hover:bg-sky-700">Save changes</button>
 
         <p>
         </p>
