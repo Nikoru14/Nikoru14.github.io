@@ -1,25 +1,135 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import "tailwindcss";
+
+/* Define your design tokens in the @theme block.
+   (Tokens in the “--color-*” namespace will automatically generate utilities like bg-primary or text-primary.) */
+@theme {
+  --color-primary: #8f43ee;
+  --color-background: #121212;
+  --color-text: #e5e7eb;
+  --color-card: #1e1e1e;
+  --color-border: #2d2d2d;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+/* Base styles (global styles) */
+@layer base {
+  body {
+    @apply bg-[var(--color-background)] text-[var(--color-text)] font-sans;
+  }
+
+  h1 {
+    @apply text-3xl font-bold;
+  }
+
+  h2 {
+    @apply text-2xl font-semibold;
+  }
+
+  h3 {
+    @apply text-xl font-medium;
+  }
+
+  p {
+    @apply text-base;
+  }
+
+  a {
+    @apply text-[var(--color-primary)] no-underline;
+  }
+
+  a:hover {
+    @apply underline;
+  }
 }
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+/* Component styles */
+@layer components {
+  .card {
+    @apply bg-[var(--color-card)] p-4 rounded-xl border border-[var(--color-border)];
+  }
+
+  .button {
+    @apply px-4 py-2 rounded-md font-semibold transition-all duration-200 bg-background text-white;
+  }
+
+  .button:hover {
+    filter: brightness(1.5);
+  }
+
+  .button:active {
+    transform: scale(0.95);
+  }
+
+  .input {
+    @apply p-2 rounded-md border bg-[var(--color-card)] text-white;
+    /* Alternatively, you can apply border color via @apply if you wish:
+       @apply border-[var(--color-border)]; */
+    border-color: var(--color-border);
+  }
+
+  .link {
+    @apply text-[var(--color-primary)] no-underline;
+  }
+
+  .link:hover {
+    @apply underline;
+  }
+
+  .logo {
+    @apply p-6 h-[200px] w-auto;
+    will-change: filter;
+    animation: logo-spin 20s linear infinite;
+  }
+
+  .logo:hover {
+    @apply transition-all duration-400;
+    filter: drop-shadow(0 0 2em rgb(0, 255, 179));
+  }
 }
 
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Utilities */
+@layer utilities {
+  .hero-section {
+    @apply p-4 bg-[var(--color-primary)] text-white h-screen;
+  }
+
+  .section {
+    @apply p-4;
+  }
+
+  .container {
+    @apply mx-auto max-w-4xl px-4;
+  }
+
+  .grid {
+    @apply grid grid-cols-1 gap-4;
+  }
+
+  .grid-sm {
+    @apply grid-cols-2;
+  }
+
+  .grid-md {
+    @apply grid-cols-3;
+  }
+
+  .grid-lg {
+    @apply grid-cols-4;
+  }
+
+  .grid-xl {
+    @apply grid-cols-5;
+  }
+
+  .grid-2xl {
+    @apply grid-cols-6;
+  }
+
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
 }
 
+/* Custom keyframes for the logo animation */
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -28,18 +138,4 @@
   to {
     transform: rotate(360deg);
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
