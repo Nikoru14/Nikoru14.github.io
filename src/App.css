@@ -101,7 +101,7 @@
   }
 
   .grid {
-    @apply grid grid-cols-1 gap-4;
+    @apply grid gap-4;
   }
 
   .grid-sm {
@@ -127,6 +127,11 @@
   .flex-center {
     @apply flex items-center justify-center;
   }
+
+  .hover-glow:hover {
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+  }
+
 }
 
 /* Custom keyframes for the logo animation */
@@ -138,4 +143,52 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Custom Swiper Pagination */
+.custom-pagination .swiper-pagination-bullet {
+  background-color: var(--color-border);
+  /* Default color */
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  transition: all 0.3s ease-in-out;
+  opacity: 0.6;
+}
+
+.custom-pagination .swiper-pagination-bullet-active {
+  background-color: var(--color-primary);
+  /* Active bullet color */
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+.swiper-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--color-primary);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+  z-index: 10;
+}
+
+.swiper-button:hover {
+  background: var(--color-bg);
+}
+
+.swiper-button-prev {
+  left: -50px;
+  /* Move left */
+}
+
+.swiper-button-next {
+  right: -50px;
+  /* Move right */
 }
