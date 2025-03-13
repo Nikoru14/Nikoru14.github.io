@@ -6,26 +6,39 @@ const NavBar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const sections = ["home", "about", "portfolio", "skills", "contact"];
+      let scrollPosition = window.scrollY + 150; // Adjust based on navbar height
       let currentSection = "";
 
-      for (let section of sections) {
-        const el = document.getElementById(section);
-        if (el) {
-          const rect = el.getBoundingClientRect();
-          if (rect.top <= 150 && rect.bottom >= 150) {
-            currentSection = section;
-            break;
+      sections.forEach((id, index) => {
+        const section = document.getElementById(id);
+        if (section) {
+          const sectionTop = section.offsetTop;
+          const sectionBottom = sectionTop + section.offsetHeight;
+
+          // 🛑 Special handling for "Contact" section when reaching the bottom of the page
+          if (id === "contact") {
+            if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 10) {
+              currentSection = "contact";
+            }
+          }
+
+          // Default logic for other sections
+          if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+            currentSection = id;
           }
         }
-      }
+      });
+
       setActiveSection(currentSection);
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Run on mount
+    handleScroll(); // Run once on mount
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+
 
   const scrollToSection = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });

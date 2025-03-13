@@ -79,10 +79,10 @@ const Portfolio = () => {
                         pagination={{ clickable: true, el: ".custom-pagination" }}
                         autoplay={{ delay: 5000, disableOnInteraction: false }}
                         breakpoints={{
-                            768: { slidesPerView: 2 },
-                            1024: { slidesPerView: 3 },
+                            768: { slidesPerView: 1 },
+                            1024: { slidesPerView: 2 },
                         }}
-                        className="max-w-5xl mx-auto"
+                        className="w-full max-w-6xl mx-auto" // Make swiper wider
                     >
                         {projects.map((project, index) => (
                             <SwiperSlide key={index}>
