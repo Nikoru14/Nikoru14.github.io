@@ -81,15 +81,15 @@ const ContactSection = () => {
                     viewport={{ amount: 0.2 }}
                     className="flex justify-center gap-6 mt-8"
                 >
-                    <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer"
+                    <a href="https://github.com/Nikoru14" target="_blank" rel="noopener noreferrer"
                         className="text-3xl text-white hover:text-[var(--color-primary)] transition-all">
                         <FaGithub />
                     </a>
-                    <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer"
+                    <a href="https://linkedin.com/in/antonio-nicholo-bongat-b80920225" target="_blank" rel="noopener noreferrer"
                         className="text-3xl text-white hover:text-[var(--color-primary)] transition-all">
                         <FaLinkedin />
                     </a>
-                    <a href="mailto:your@email.com"
+                    <a href="mailto:nicholosantosbongat@gmail.com"
                         className="text-3xl text-white hover:text-[var(--color-primary)] transition-all">
                         <FaEnvelope />
                     </a>

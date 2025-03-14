@@ -5,6 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import ProjectCard from "../components/ProjectCard";
+import { image } from "framer-motion/client";
 
 const Portfolio = () => {
     const prevRef = useRef(null);
@@ -21,35 +22,33 @@ const Portfolio = () => {
             repo: "https://github.com/Nikoru14",
         },
         {
-            title: "Task Manager",
-            description: "A simple task management app with user authentication.",
-            techStack: ["React", "Firebase", "Tailwind CSS"],
-            image: "/task-manager.jpg",
-            liveDemo: "https://your-taskmanager.com",
-            repo: "https://github.com/yourusername/task-manager",
+            title: "Ludwig AI",
+            description: "A webapp that can play, record MIDI files using WebMIDI.js and its defining feature, AI Melody Generation using a trained LSTM Model. [Won Best in Ressearch Award (LSPU SC 2024 Graduation)]",
+            techStack: ["React", "Firebase", "TensorflowJS"],
+            image: "/ludwig.png",
+            liveDemo: "https://ludwig-ai.vercel.app/",
+            repo: "https://github.com/Nikoru14",
         },
         {
-            title: "Task Manager",
-            description: "A simple task management app with user authentication.",
-            techStack: ["React", "Firebase", "Tailwind CSS"],
-            image: "/task-manager.jpg",
-            liveDemo: "https://your-taskmanager.com",
-            repo: "https://github.com/yourusername/task-manager",
+            title: "FurniShop AR",
+            description: "FurniShop AR is a mockup furniture shop demonstrating augmented reality functionality, allowing users to visualize furniture in their space for an interactive shopping experience.",
+            techStack: ["HTML", "CSS", "JavaScript", "A-Frame", "AR.js", "WebXR"],
+            image: "/furnishop.png",
+            liveDemo: "https://nikoru.dev/FurniShopAR/",
+            repo: "https:/github.com/Nikoru14",
         },
         {
-            title: "Task Manager",
-            description: "A simple task management app with user authentication.",
-            techStack: ["React", "Firebase", "Tailwind CSS"],
-            image: "/task-manager.jpg",
-            liveDemo: "https://your-taskmanager.com",
-            repo: "https://github.com/yourusername/task-manager",
+            title: "Resort Reservation System",
+            description: "Reservation Management System for Yoyong and Dita’s Resort Customer Reservation using C# Programming Language on Windows Forms",
+            techStack: ["C#", "SQL Server"],
+            image: "/resort.png",
+            repo: "https:/github.com/Nikoru14",
         },
-
         {
             title: "Portfolio Website",
             description: "A modern portfolio built with React and Tailwind CSS.",
             techStack: ["React", "Tailwind CSS", "Vite"],
-            image: "/portfolio.jpg",
+            image: "/portfolio.png",
             liveDemo: "https://your-portfolio.com",
             repo: "https://github.com/yourusername/portfolio",
         },
@@ -94,16 +93,19 @@ const Portfolio = () => {
                     {/* Custom Navigation Buttons */}
                     <button
                         ref={prevRef}
-                        className="absolute top-1/2 -left-12 transform -translate-y-1/2 bg-[var(--color-primary)] text-white p-3 rounded-full shadow-lg hover:bg-[var(--color-bg)] transition-all z-10 cursor-pointer"
+                        className="absolute top-1/2 left-2 md:-left-12 transform -translate-y-1/2 bg-[var(--color-primary)] text-white p-3 rounded-full shadow-lg 
+               hover:bg-[var(--color-bg)] transition-all z-10 cursor-pointer"
                     >
                         ❮
                     </button>
                     <button
                         ref={nextRef}
-                        className="absolute top-1/2 -right-12 transform -translate-y-1/2 bg-[var(--color-primary)] text-white p-3 rounded-full shadow-lg hover:bg-[var(--color-bg)] transition-all z-10 cursor-pointer"
+                        className="absolute top-1/2 right-2 md:-right-12 transform -translate-y-1/2 bg-[var(--color-primary)] text-white p-3 rounded-full shadow-lg 
+               hover:bg-[var(--color-bg)] transition-all z-10 cursor-pointer"
                     >
                         ❯
                     </button>
+
                     <div className="custom-pagination flex justify-center mt-6"></div>
                 </div>
             </div>

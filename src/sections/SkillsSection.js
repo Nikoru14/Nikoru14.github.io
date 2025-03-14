@@ -13,6 +13,7 @@ const techs = [
     { name: "Firebase", icon: <SiFirebase className="text-yellow-500" /> },
     { name: "TensorFlow", icon: <SiTensorflow className="text-orange-500" /> },
     { name: "Python", icon: <FaPython className="text-blue-400" /> },
+    { name: "C#", icon: <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Logo_C_sharp.svg" alt="C#" className="w-12 h-12 object-contain" /> },
     { name: "Git", icon: <FaGitAlt className="text-red-500" /> },
     { name: "Figma", icon: <SiFigma className="text-pink-500" /> },
     { name: "Photoshop", icon: <SiAdobephotoshop className="text-blue-400" /> },
