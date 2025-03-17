@@ -12,7 +12,7 @@ const AboutMe = () => {
                 <div className="flex justify-center gap-6 mt-6">
                     <a
                         href="/cv_bongat.pdf"
-                        download="Nikko_Bongat_CV.pdf"
+                        download="ANSB_CV.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="button"
